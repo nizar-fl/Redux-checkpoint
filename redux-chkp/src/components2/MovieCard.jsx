@@ -1,7 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Rating from 'react-star-rating-lite';
 import { removeMovie } from '../JS/Actions/MovieAction';
+import Details from './Details';
 
 
 export default function MovieCard({movie}) {
@@ -17,6 +19,8 @@ export default function MovieCard({movie}) {
         >
             delete film
         </button>
+        <Link to={`/Details/${movie.id}`}><button>more details</button></Link>
+        {/* <Details movie={movie}/> */}
 
     </div>
   )

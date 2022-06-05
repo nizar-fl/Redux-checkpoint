@@ -41,8 +41,9 @@ export default function AddMovie() {
         placeholder="movie rate"
         onChange={handleChange}
         required
+        min="0" max="5"
         />
-        <button type='submit'  onClick={()=>dispatch(addMovie(movie))}>add </button>
+        <button type='submit'  onClick={()=>dispatch(addMovie({...movie,id:Math.random()}))}>add </button>
     </div>
   )
 }
