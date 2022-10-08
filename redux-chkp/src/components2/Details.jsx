@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 export default function Details() {
     console.log("dddddddddddddddddd")
     const movies = useSelector((state) => state.MovieReducer.Data);
+    
     const {id} = useParams()
     const ownmovie = movies.find((mo) => mo.id == id)
   return (
